@@ -492,6 +492,10 @@ pub struct OutboundRule {
 	#[serde(default)]
 	pub tfo: Option<bool>,
 
+	/// Enable MultiPath TCP
+	#[serde(default)]
+	pub mptcp: Option<bool>,
+
 	/// Linux `SO_MARK` for policy routing (only used when kind == "direct").
 	/// Sets the fwmark on every socket so the kernel can steer traffic
 	/// through a specific routing table.
