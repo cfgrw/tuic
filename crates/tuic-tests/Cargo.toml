@@ -54,7 +54,7 @@ tokio-util = { version = "0.7", features = ["codec"] }
 # `masquerade-test` feature; see that feature's comment for why it cannot be an
 # unconditional dependency (and why it cannot live in `[dev-dependencies]`,
 # which cargo forbids from being optional).
-reqwest = { version = "0.12", default-features = false, features = ["http3", "rustls-tls"], optional = true }
+reqwest = { version = "0.13", default-features = false, features = ["http3", "rustls"], optional = true }
 http = { version = "1", optional = true }
 
 [dev-dependencies]
@@ -64,7 +64,7 @@ rcgen = { version = "0.14", default-features = false, features = ["crypto", "pem
 # `benches/codspeed.rs`: the CodSpeed-facing harness. The crate is the
 # `codspeed-criterion-compat` mirror of `criterion`, so `cargo bench` and
 # `cargo codspeed run` execute the same benchmark functions.
-criterion = { version = "5.0.2", package = "codspeed-criterion-compat" }
+criterion = { version = "6.0.0", package = "codspeed-criterion-compat" }
 
 # `tests/integration/tls_options.rs`: a recording `ResolvesServerCert` needs rustls' server
 # and signing traits, and `tempfile`/`rustls-pemfile` cover the certificate

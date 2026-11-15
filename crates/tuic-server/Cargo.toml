@@ -30,7 +30,7 @@ wind-acme = { git = "https://github.com/rust-proxy/wind", rev = "03d5406049af1c9
 wind-acl = { git = "https://github.com/rust-proxy/wind", rev = "03d5406049af1c950b178829d24b4a67d6fad1f2" }
 wind-geodata = { git = "https://github.com/rust-proxy/wind", rev = "03d5406049af1c950b178829d24b4a67d6fad1f2" }
 
-toml = "1.0"
+toml = "1.2"
 clap = { version = "4", features = ["derive"] }
 socket2 = { version = "0.6", default-features = false }
 arc-swap = "1"
@@ -65,8 +65,8 @@ ipnet = { version = "2", features = ["serde"] }
 regex = "1"
 
 # Legacy ACL parser (space-separated dialect; see `legacy` module)
-pest = "2.8"
-pest_derive = "2.8"
+pest = "2.9"
+pest_derive = "2.9"
 
 # Logging
 time = { version = "0.3", features = ["macros", "local-offset"] }
@@ -87,7 +87,7 @@ tikv-jemallocator = { version = "0.7", optional = true }
 rand = "0.10"
 
 [dev-dependencies]
-reqwest = { version = "0.12", default-features = false, features = ["rustls-tls"]}
+reqwest = { version = "0.13", default-features = false, features = ["rustls"]}
 ip_network = "0.4"
 tempfile = "3"
 tokio = { version = "1", features = ["full", "test-util"] }
