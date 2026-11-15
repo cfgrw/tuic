@@ -2,14 +2,13 @@ use std::{process, str::FromStr};
 
 use chrono::Offset;
 use clap::Parser;
-#[cfg(feature = "jemallocator")]
-use tikv_jemallocator::Jemalloc;
-use tracing::level_filters::LevelFilter;
+use mimalloc::MiMalloc;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
+use tracing::level_filters::LevelFilter;
 use tuic_client::config::{Cli, Config, EnvState};
-#[cfg(feature = "jemallocator")]
+
 #[global_allocator]
-static GLOBAL: Jemalloc = Jemalloc;
+static GLOBAL: MiMalloc = MiMalloc;
 
 /// Tracing targets enabled at the configured level for client-related crates.
 ///

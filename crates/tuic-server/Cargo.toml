@@ -15,7 +15,6 @@ repository.workspace = true
 default = ["aws-lc-rs", "quinn"]
 ring = ["rustls/ring", "rcgen/ring", "quinn/rustls-ring"]
 aws-lc-rs = ["dep:aws-lc-rs", "rustls/aws-lc-rs", "rcgen/aws_lc_rs", "quinn/rustls-aws-lc-rs"]
-jemallocator = ["tikv-jemallocator"]
 quinn = ["wind-tuic/quinn"]
 
 [dependencies]
@@ -83,8 +82,9 @@ async-trait = "0.1"
 # Error handling
 eyre = { version = "0.6" }
 
-tikv-jemallocator = { version = "0.7", optional = true }
 rand = "0.10"
+
+mimalloc = { git = "https://github.com/microsoft/mimalloc", branch = "dev3", features = ["override"] }
 
 [dev-dependencies]
 reqwest = { version = "0.12", default-features = false, features = ["rustls-tls"]}

@@ -25,7 +25,6 @@ target = "x86_64-unknown-linux-gnu"
 release-name = "x86_64-linux"
 tool = "cross"
 # Both QUIC backends are compiled on every target.
-extra-args = "--features jemallocator"
 zig = "2.17"
 
 # 32-bit Linux (GNU)
@@ -34,7 +33,6 @@ os = "ubuntu-latest"
 target = "i686-unknown-linux-gnu"
 release-name = "i686-linux"
 tool = "cross"
-extra-args = "--features jemallocator"
 
 # ==================== Linux Targets (MUSL) ====================
 
@@ -44,7 +42,6 @@ os = "ubuntu-latest"
 target = "x86_64-unknown-linux-musl"
 release-name = "x86_64-linux-musl"
 tool = "cross"
-extra-args = "--features jemallocator"
 
 # 32-bit Linux (MUSL - statically linked)
 [[target]]
@@ -62,7 +59,6 @@ os = "ubuntu-latest"
 target = "aarch64-unknown-linux-gnu"
 release-name = "aarch64-linux"
 tool = "cross"
-extra-args = "--features jemallocator"
 
 # ARMv7 Linux (GNU - soft float ABI)
 [[target]]
@@ -70,7 +66,7 @@ os = "ubuntu-latest"
 target = "armv7-unknown-linux-gnueabi"
 release-name = "armv7-linux"
 tool = "cross"
-extra-args = "--no-default-features --features ring,jemallocator"
+extra-args = "--no-default-features --features ring"
 
 # ARMv7 Linux (GNU - hard float ABI)
 [[target]]
@@ -78,7 +74,7 @@ os = "ubuntu-latest"
 target = "armv7-unknown-linux-gnueabihf"
 release-name = "armv7-linux-hf"
 tool = "cross"
-extra-args = "--no-default-features --features ring,jemallocator"
+extra-args = "--no-default-features --features ring"
 
 # ==================== ARM Linux Targets (MUSL) ====================
 
@@ -88,7 +84,6 @@ os = "ubuntu-latest"
 target = "aarch64-unknown-linux-musl"
 release-name = "aarch64-linux-musl"
 tool = "cross"
-extra-args = "--features jemallocator"
 
 # ARMv7 Linux (MUSL - soft float ABI, statically linked)
 [[target]]
@@ -149,14 +144,12 @@ skip-test = true
 os = "macos-15-intel"
 target = "x86_64-apple-darwin"
 release-name = "x86_64-darwin"
-extra-args = "--features jemallocator"
 
 # Apple Silicon macOS (ARM64)
 [[target]]
 os = "macos-latest"
 target = "aarch64-apple-darwin"
 release-name = "aarch64-darwin"
-extra-args = "--features jemallocator"
 
 # ==================== Other Targets ====================
 
@@ -175,7 +168,7 @@ os = "ubuntu-latest"
 target = "riscv64gc-unknown-linux-gnu"
 release-name = "riscv64gc-linux"
 tool = "cross"
-extra-args = "--no-default-features --features ring,jemallocator"
+extra-args = "--no-default-features --features ring"
 
 # LoongArch 64-bit Linux
 [[target]]

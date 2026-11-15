@@ -9,7 +9,6 @@ os = "ubuntu-latest"
 target = "x86_64-unknown-linux-gnu"
 release-name = "x86_64-linux"
 tool = "cross"
-extra-args = "--features jemallocator"
 zig = "2.17"
 
 [[target]]
@@ -17,14 +16,12 @@ os = "ubuntu-latest"
 target = "x86_64-unknown-linux-musl"
 release-name = "x86_64-linux-musl"
 tool = "cross"
-extra-args = "--features jemallocator"
 
 [[target]]
 os = "ubuntu-latest"
 target = "aarch64-unknown-linux-gnu"
 release-name = "aarch64-linux"
 tool = "cross"
-extra-args = "--features jemallocator"
 
 [[target]]
 os = "windows-latest"
@@ -37,4 +34,3 @@ extra-args = ""
 os = "macos-latest"
 target = "aarch64-apple-darwin"
 release-name = "aarch64-darwin"
-extra-args = "--features jemallocator"

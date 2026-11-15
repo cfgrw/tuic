@@ -1,13 +1,11 @@
 use std::process;
 
 use clap::Parser;
-#[cfg(feature = "jemallocator")]
-use tikv_jemallocator::Jemalloc;
+use mimalloc::MiMalloc;
 use tuic_server::config::{Cli, Control, EnvState, parse_config};
 
-#[cfg(feature = "jemallocator")]
 #[global_allocator]
-static GLOBAL: Jemalloc = Jemalloc;
+static GLOBAL: MiMalloc = MiMalloc;
 
 #[tokio::main]
 async fn main() -> eyre::Result<()> {
