@@ -30,6 +30,17 @@ quinn-congestions = { git = "https://github.com/proxy-rs/quinn-congestions.git",
 quiche = { git = "https://github.com/rust-proxy/quiche", rev = "b25abcc4077ef03de1272832d6427ecfe761c09c" }
 datagram-socket = { git = "https://github.com/rust-proxy/quiche", rev = "b25abcc4077ef03de1272832d6427ecfe761c09c" }
 tokio-quiche = { git = "https://github.com/rust-proxy/quiche", rev = "b25abcc4077ef03de1272832d6427ecfe761c09c" }
+[patch."https://github.com/rust-proxy/wind"]
+wind-acl = { git = "https://github.com/cfgrw/wind", branch = "dev" }
+wind-acme = { git = "https://github.com/cfgrw/wind", branch = "dev" }
+wind-base = { git = "https://github.com/cfgrw/wind", branch = "dev" }
+wind-core = { git = "https://github.com/cfgrw/wind", branch = "dev" }
+wind-dns = { git = "https://github.com/cfgrw/wind", branch = "dev" }
+wind-geodata = { git = "https://github.com/cfgrw/wind", branch = "dev" }
+wind-quic = { git = "https://github.com/cfgrw/wind", branch = "dev" }
+wind-rule = { git = "https://github.com/cfgrw/wind", branch = "dev" }
+wind-socks = { git = "https://github.com/cfgrw/wind", branch = "dev" }
+wind-tuic = { git = "https://github.com/cfgrw/wind", branch = "dev" }
 
 [workspace.lints.clippy]
 unwrap_used = "deny"
