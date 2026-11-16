@@ -205,7 +205,7 @@ fn make_direct_opts(
 		ip_mode: rule.ip_mode,
 		routing_mark: rule.routing_mark,
 		tfo: rule.tfo.unwrap_or(false),
-		mptcp: false,
+		mptcp: rule.mptcp.unwrap_or(false),
 	}
 }
 
@@ -363,6 +363,7 @@ mod tests {
 			bind_device: None,
 			routing_mark: None,
 			tfo: None,
+			mptcp: None,
 		};
 		let _action = make_outbound_action(&rule, default_resolver(), Duration::from_secs(30));
 	}
@@ -381,6 +382,7 @@ mod tests {
 			bind_device: None,
 			routing_mark: None,
 			tfo: None,
+			mptcp: None,
 		};
 		let _action = make_outbound_action(&rule, default_resolver(), Duration::from_secs(30));
 	}
@@ -399,6 +401,7 @@ mod tests {
 			bind_device: None,
 			routing_mark: None,
 			tfo: None,
+			mptcp: None,
 		};
 		let _action = make_outbound_action(&rule, default_resolver(), Duration::from_secs(30));
 	}
@@ -417,6 +420,7 @@ mod tests {
 			bind_device: None,
 			routing_mark: None,
 			tfo: None,
+			mptcp: None,
 		};
 		let _action = make_outbound_action(&rule, default_resolver(), Duration::from_secs(0));
 	}
@@ -437,6 +441,7 @@ mod tests {
 			bind_device: None,
 			routing_mark: None,
 			tfo: None,
+			mptcp: None,
 		};
 		let _action = make_outbound_action(&rule, default_resolver(), Duration::from_secs(30));
 	}
@@ -460,6 +465,7 @@ mod tests {
 			bind_device: None,
 			routing_mark: None,
 			tfo: None,
+			mptcp: None,
 		};
 		let _action = make_outbound_action(&rule, default_resolver(), Duration::from_secs(30));
 	}
@@ -479,6 +485,7 @@ mod tests {
 			bind_device: None,
 			routing_mark: None,
 			tfo: None,
+			mptcp: None,
 		};
 		let _action = make_outbound_action(&rule, default_resolver(), Duration::from_secs(30));
 	}
@@ -499,6 +506,7 @@ mod tests {
 			bind_device: None,
 			routing_mark: None,
 			tfo: None,
+			mptcp: None,
 		};
 		let _action = make_outbound_action(&rule, default_resolver(), Duration::from_secs(30));
 	}
@@ -518,6 +526,7 @@ mod tests {
 			bind_device: None,
 			routing_mark: None,
 			tfo: None,
+			mptcp: None,
 		};
 		let _action = make_outbound_action(&rule, default_resolver(), Duration::from_secs(30));
 	}
