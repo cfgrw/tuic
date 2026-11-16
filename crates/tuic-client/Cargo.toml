@@ -15,7 +15,6 @@ repository.workspace = true
 default = ["aws-lc-rs"]
 ring = ["rustls/ring", "quinn/rustls-ring", "rcgen/ring"]
 aws-lc-rs = ["dep:aws-lc-rs", "rustls/aws-lc-rs", "quinn/rustls-aws-lc-rs", "rcgen/aws_lc_rs"]
-jemallocator = ["tikv-jemallocator"]
 
 [dependencies]
 
@@ -68,7 +67,7 @@ tracing-subscriber = { version = "0.3", default-features = false, features = ["t
 chrono = "0.4"
 tracing = "0.1"
 
-tikv-jemallocator = { version = "0.7", optional = true }
+mimalloc = { git = "https://github.com/microsoft/mimalloc", branch = "dev3", features = ["override"] }
 
 [dev-dependencies]
 fast-socks5 = { version = "1" }
